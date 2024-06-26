@@ -53,21 +53,9 @@ desire = {
     8: "Revenge",
 }
 
-print(len(weakness))
-print(len(strength))
-print(len(fear))
-print(len(desire))
-
+# Seed the random number generator
 random.seed()
 
+# Loop through the tables and print a random value
 for i in [weakness, strength, fear, desire]:
-    choice = random.randint(1, len(i))
-    print(i[0], i[choice])
-
-# for i in [weakness, strength]:
-    # choice1 = random.randint(1, 10)
-    # print(i[0], i[choice1])
-
-# for i in [fear, desire]:
-    # choice2 = random.randint(1, 8)
-    # print(i[0], i[choice2])
+    print(i[0], i[random.randint(1, len(i) - 1)])
